@@ -1,0 +1,12 @@
+<h1> My Favourite Orgs </h1>
+
+<ul>
+  {{#each content as |org|}}
+    <li>
+      <span {{action 'favouriteClicked' org}} > [ Favourite ] </span>
+      {{link-to org.id 'org' org.id}}
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
